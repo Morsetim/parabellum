@@ -15,23 +15,30 @@ const Signin = () => {
     });
     const [loading, setLoading] = useState(false);
     const [checkError, setCheckError] = useState(false)
+    const [registerError, setRegisterError] = useState(null)
 
-    const {error, currentUser} = useSelector(state => state);
+    const {error, currentUser, loginSuccess, loginFailure} = useSelector(state => state);
 
     const dispatch = useDispatch();
     const history = useHistory();
 
     useEffect(() => {
-        if(currentUser?.uid){
-            history.push("/")
+        if(currentUser?.uid && loginSuccess === 200){
+            history.push("/home")
         }
-    }, [currentUser, history])
+    }, [loginSuccess, currentUser, history])
 
     useEffect(() => {
-        if(error){
+        if(error == 'Firebase: Error (auth/invalid-email).' && loginFailure === 401){
             setCheckError(true)
+            setRegisterError('Invalid email')
+        }
+        if(error == 'Firebase: Error (auth/user-not-found).' && loginFailure === 401){
+            setCheckError(true)
+            setRegisterError('User not found')
         }
     }, [error])
+
 
     const handleChange = (e) => {
         setUserInfo(prevState => ({...prevState, [e.target.name]: e.target.value}));
@@ -53,7 +60,7 @@ const Signin = () => {
     return (
         <MainContainer>
                 <LoginContainer>
-                {checkError && <p className='invalid-user'>{error}</p>}
+                {checkError && <p className='invalid-user'>{registerError}</p>}
                 <div className='icon-text'>
                     <Vector />
                     <h2 className='admin-h2'>Hi welcome</h2>

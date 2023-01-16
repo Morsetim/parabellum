@@ -11,39 +11,49 @@ const Signup = () => {
     const [userInfo, setUserInfo]  = useState({
         displayName: 'test test',
         email:'test@test.com',
-        password:"qwerty"
+        password:"qwerty",
     });
     const history = useHistory();
     const [loading, setLoading] = useState(false);
     const [checkError, setCheckError] = useState(false)
-    const {currentUser} = useSelector(state => state);
+    const [registerError, setRegisterError] = useState(null)
+    const {error, registerSuccess, currentUser, registerFaliure} = useSelector(state => state);
+    // const a = useSelector(state => console.log(state, "reduser state"));
+    const [disabledInput] = useState(false)
+    // console.log(currentUser, "currentUsercurrentUser")
 
     useEffect(() => {
-        if(currentUser?.uid){
+        if(currentUser?.uid && registerSuccess === 200){
             history.push("/user-signin")
         }
-    }, [currentUser, history])
+    }, [currentUser, registerSuccess, history])
 
     useEffect(() => {
-        if(currentUser){
+        if(error === 'Firebase: Error (auth/email-already-in-use).' && registerFaliure === 401){
             setCheckError(true)
+            setRegisterError('Email already in use')
         }
-    }, [currentUser])
+        if(error == 'Firebase: Error (auth/invalid-email).'){
+            setCheckError(true)
+            setRegisterError('Invalid email')
+        }
+    }, [error])
+    
 
     const dispatch = useDispatch();
-
+    
     const handleChange = (e) => {
         setUserInfo(prevState => ({...prevState, [e.target.name]: e.target.value}));
     }
     const disabled = Object.values(userInfo).some(text=> text ==='');
-
+    
     const { email, displayName, password } = userInfo;
-
+    
     const signup = (e) => {
         e.preventDefault();
         dispatch(registerInitiate(email, password, displayName))
     };
-
+    
 
     const redirect = () => {
         history.push('/user-signin')
@@ -52,7 +62,7 @@ const Signup = () => {
     return (
         <MainContainer>
                 <LoginContainer>
-               {checkError && <p className='invalid-user'>{currentUser}</p>}
+               {checkError && <p className='invalid-user'>{registerError}</p>}
                 <div className='icon-text'>
                     <Vector />
                     <h2 className='admin-h2'>Hi welcome</h2>
@@ -66,7 +76,7 @@ const Signup = () => {
                         <input value={email} className='input' type="email" name="email" onChange={handleChange} placeholder="email" />
                     </label>
                     <label className="label">
-                        <input className='input' value={password} type="password" name="password"  onChange={handleChange} placeholder="password"/>
+                        <input className='input' value={password} type="password" name="password" onChange={handleChange} placeholder="password"/>
                     </label>
                     <button className={disabled ? 'login-disable-btn':'login-btn'} disabled={ disabled }>{loading ? <PageLoader Farm={'loading...'} className='pageLoader-screens' />:"REGISTER"}</button>
                     <p>Already have an account? <span className='acc' onClick={redirect}>Login</span></p>

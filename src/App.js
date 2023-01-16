@@ -12,7 +12,8 @@ function App() {
   return (
     <Router>
     <Switch>
-      <Route exact path="/"><Home /></Route>
+      <Route exact path="/"><Signup /></Route>
+      <Route exact path="/home"><Home /></Route>
       <Route path="/user-signup"> <Signup /></Route>
       <Route path="/user-signin"> <Signin /></Route>
     </Switch>
