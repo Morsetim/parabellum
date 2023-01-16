@@ -22,7 +22,7 @@ const Navbar = () => {
         <span className="search-icon"><Search /></span>
       </div>
       <div className="tab-3">
-        <p>Hi!, {currentUser?.displayName.charAt(0).toUpperCase() + currentUser?.displayName.slice(1)}</p>
+        <p>Hi, {currentUser?.displayName.charAt(0).toUpperCase() + currentUser?.displayName.slice(1)}</p>
         <span className="vid"><Multi /> </span>
       </div>
     </NavbarMain>

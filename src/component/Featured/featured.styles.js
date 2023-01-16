@@ -43,6 +43,7 @@ export const DescContainer = styled.div`
         height: 25px;
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
      }
      .imdb-1{
         display:flex ;
@@ -70,14 +71,15 @@ export const DescContainer = styled.div`
      }
      
      .per{
-        color: white;
         margin: 0;
         margin-left: 10px;
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 15px;
+        color: #FFFFFF !important;
      }
+
      .desc-text{
         color: white;
         margin-top: 10px;

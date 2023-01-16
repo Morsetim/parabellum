@@ -1,0 +1,104 @@
+.video-container {
+    height: 540px;
+
+    p{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #111827;
+    }
+  }
+  
+  .videoItem {
+    width: 365px;
+    height: 166px;
+    background: black;
+    margin-right: 64px;
+    // overflow: hidden;
+    cursor: pointer;
+    color: white;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+  }
+  .list-details {
+    padding: 0;
+    overflow: hidden;
+    .cont {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      color: #9ca3af;
+    }
+    .str {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: #111827;
+      margin-top: -12px;
+    }
+    .genre{
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      color: #9CA3AF;
+      margin-top: 0px;
+    }
+  }
+  
+  .imdb{
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: -20px;
+  
+      .imdb-1{
+          display:flex ;
+          flex: 1;
+          align-items: center;
+          justify-content: space-between;
+          height: inherit;
+       }
+  
+       .imdb-p{
+          background: gold;
+          font-size: 14px;
+          padding: 2.6px;
+          font-weight: 700;
+       }
+       .imdb-price{
+          color: black;
+          font-size: 14px;
+          margin: auto;
+       }
+  
+       .imdb-2{
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          margin-top: 9px;
+  
+          .per{
+              color: black;
+              margin: 0;
+              margin-left: 10px;
+              font-family: 'DM Sans';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 15px;
+           }
+       }
+   }
+  

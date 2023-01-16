@@ -25,7 +25,7 @@ export const NavbarMain = styled.div`
         display: inline-flex;
         justify-content: space-between;
         min-width: 150px;
-        flex-direction: row-reverse;
+        /* flex-direction: row-reverse; */
         align-items: center;
     }
     .tab-3 p{
@@ -40,9 +40,10 @@ export const NavbarMain = styled.div`
     }
     .vid{
         margin-left: 15px;
-        position: fixed;
+        /* position: fixed; */
         flex-grow: 1;
         padding: 0;
+       
     }
     .tab-1 p{
         position:absolute ;
