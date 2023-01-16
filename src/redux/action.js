@@ -15,7 +15,7 @@ const registerSuccess = (user) =>({
 })
 
 const registerFailure = (error) =>({
-    type: types.REGISTER_SUCCESS,
+    type: types.REGISTER_FAILURE,
     payload: error
 })
 
@@ -40,9 +40,8 @@ export const registerInitiate = (email, password, displayName) => {
         .then(async (res) => {
             const user = res.user;
             await updateProfile(user, {
-                displayName: displayName    
+                displayName: displayName,
             })
-
             dispatch(registerSuccess(user))
         })
         .catch((error) =>dispatch(registerFailure(error.message)))

@@ -3,7 +3,11 @@ import * as types from "./actionTypes"
 
 const initialState = {
     currentUser: null,
-    error: null
+    error: null,
+    registerSuccess: null,
+    registerFaliure: null,
+    loginSuccess: null,
+    loginFailure: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -13,16 +17,29 @@ const reducer = (state = initialState, action) => {
          return { ...state }
 
         case types.REGISTER_SUCCESS:
+            return {
+                ...state,
+                currentUser: action.payload,
+                registerSuccess: 200,  
+            }
         case types.LOGIN_SUCCESS:
          return {
             ...state,
-            currentUser: action.payload
+            currentUser: action.payload,
+            loginSuccess: 200
          }
          case types.REGISTER_FAILURE:
-         case types.LOGIN_FAILURE:
+             return {
+                 ...state,
+                 error: action.payload,
+                 registerFaliure: 401,
+                }
+                case types.LOGIN_FAILURE:
+             console.log(action.payload, "rederrr")
             return{
                 ...state,
-                error: action.payload
+                error: action.payload,
+                loginFailure: 401
          }
         default:
             return state;

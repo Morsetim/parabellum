@@ -1,8 +1,11 @@
 import React from 'react'
+import Featured from 'component/Featured';
 
 const Home = () => {
   return (
-    <div>Welcome Home</div>
+    <div>
+        <Featured/>
+    </div>
   )
 }
 
