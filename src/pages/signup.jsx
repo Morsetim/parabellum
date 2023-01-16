@@ -54,6 +54,7 @@ const Signup = () => {
         dispatch(registerInitiate(email, password, displayName))
     };
     
+    
 
     const redirect = () => {
         history.push('/user-signin')
@@ -79,7 +80,7 @@ const Signup = () => {
                         <input className='input' value={password} type="password" name="password" onChange={handleChange} placeholder="password"/>
                     </label>
                     <button className={disabled ? 'login-disable-btn':'login-btn'} disabled={ disabled }>{loading ? <PageLoader Farm={'loading...'} className='pageLoader-screens' />:"REGISTER"}</button>
-                    <p>Already have an account? <span className='acc' onClick={redirect}>Login</span></p>
+                    <div className='already'><span>Already have an account?</span> <span className='acc' onClick={redirect}>Login</span></div>
                 </FormContainer>
             </LoginContainer>
         </MainContainer>

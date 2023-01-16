@@ -39,12 +39,29 @@ export const NavbarMain = styled.div`
         padding-right: 10px;
     }
     .vid{
-        margin-left: 15px;
-        /* position: fixed; */
+        /* margin-left: 15px; */
         flex-grow: 1;
         padding: 0;
-       
+        cursor: pointer;
     }
+    .gen3-tab{
+        display: flex;
+        flex-direction: column;
+    }
+    .logout{
+        width: 48px;
+        height: 20px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        align-self: flex-end;
+        margin-top: -5px;
+        color: white;
+        cursor: pointer;
+    }
+    
     .tab-1 p{
         position:absolute ;
         right: 5px;
