@@ -24,7 +24,7 @@ const Signin = () => {
 
     useEffect(() => {
         if(currentUser?.uid && loginSuccess === 200){
-            history.push("/")
+            history.push("/home")
         }
     }, [loginSuccess, currentUser, history])
 
