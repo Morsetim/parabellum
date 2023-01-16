@@ -64,7 +64,6 @@ export const ImageContainer = styled.div`
 `;
 
 export const LoginContainer = styled.div`
-    /* width: 50%; */
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -78,10 +77,11 @@ export const LoginContainer = styled.div`
 
     .admin-text{
         font-size: 19px;
-        color: #718a33
+        color: black;
+        text-align: center;
     }
     .admin-h2{
-        color: #003c37
+        color: black
     }
     .forgot-password{
         width: 100%;
@@ -116,9 +116,12 @@ export const FormContainer = styled.form`
         font-size: 16px;
         padding-left: 10px;
     }
+    .already{
+        margin: auto;
+    }
     .login-btn{
         height: 45px;
-        background: #124829;
+        background: black;
         color: white;
         font-weight: 400;
         font-size: 18px;
@@ -128,6 +131,7 @@ export const FormContainer = styled.form`
         border: 1px solid white;
         cursor: pointer;
         border-radius: 5px;
+        margin-top: 20px;
     }
     .login-disable-btn {
         background: #648070;

@@ -41,6 +41,17 @@ const reducer = (state = initialState, action) => {
                 error: action.payload,
                 loginFailure: 401
          }
+         case types.LOGOUT:
+             return {
+                ...state,
+                currentUser: null,
+                error: null,
+                registerSuccess: null,
+                registerFaliure: null,
+                loginSuccess: null,
+                loginFailure: null
+                }
+
         default:
             return state;
     }

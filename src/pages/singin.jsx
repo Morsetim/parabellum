@@ -10,7 +10,7 @@ import { LoginInitiate } from 'redux/action';
 
 const Signin = () => {
     const [userInfo, setUserInfo]  = useState({
-        email:'test@test.com',
+        email:'mauro@test.com',
         password:"qwerty"
     });
     const [loading, setLoading] = useState(false);
@@ -74,7 +74,7 @@ const Signin = () => {
                         <input className='input' value={userInfo.password} type="password" name="password"  onChange={handleChange} placeholder="password"/>
                     </label>
                     <button className={disabled ? 'login-disable-btn':'login-btn'} disabled={ disabled }>{loading ? <PageLoader Farm={'loading...'} className='pageLoader-screens' />:"Login"}</button>
-                   <p>Don't have an account? <span className='acc' onClick={redirect}>Register</span></p>
+                   <div className='already'>Don't have an account? <span className='acc' onClick={redirect}>Register</span></div>
                 </FormContainer>
             </LoginContainer>
         </MainContainer>

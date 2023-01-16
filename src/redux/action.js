@@ -33,6 +33,13 @@ const LoginFailure = (error) =>({
     payload: error
 })
 
+export const Logout = () => (dispatch) => {
+    localStorage.clear()
+    dispatch({
+      type: types.LOGOUT
+    })
+  }
+
 export const registerInitiate = (email, password, displayName) => {
     return function (dispatch) {
         dispatch(registerStart());
@@ -60,3 +67,4 @@ export const LoginInitiate = (email, password) => {
         .catch((error) =>dispatch(LoginFailure(error.message)))
     }
 }
+

@@ -2,6 +2,7 @@ import './App.css';
 import Signup from 'pages/signup';
 import Signin from 'pages/singin';
 import Home from 'pages/home';
+import ProtectedRoute from 'ProtectedRoute';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,9 +14,9 @@ function App() {
     <Router>
     <Switch>
       <Route exact path="/"><Signup /></Route>
-      <Route exact path="/home"><Home /></Route>
       <Route path="/user-signup"> <Signup /></Route>
       <Route path="/user-signin"> <Signin /></Route>
+      <ProtectedRoute exact path="/home"><Home /></ProtectedRoute>
     </Switch>
   </Router>
   );
