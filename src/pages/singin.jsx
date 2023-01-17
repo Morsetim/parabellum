@@ -29,11 +29,11 @@ const Signin = () => {
     }, [loginSuccess, currentUser, history])
 
     useEffect(() => {
-        if(error == 'Firebase: Error (auth/invalid-email).' && loginFailure === 401){
+        if(error === 'Firebase: Error (auth/invalid-email).' && loginFailure === 401){
             setCheckError(true)
             setRegisterError('Invalid email')
         }
-        if(error == 'Firebase: Error (auth/user-not-found).' && loginFailure === 401){
+        if(error === 'Firebase: Error (auth/user-not-found).' && loginFailure === 401){
             setCheckError(true)
             setRegisterError('User not found')
         }

@@ -18,9 +18,7 @@ const Signup = () => {
     const [checkError, setCheckError] = useState(false)
     const [registerError, setRegisterError] = useState(null)
     const {error, registerSuccess, currentUser, registerFaliure} = useSelector(state => state);
-    // const a = useSelector(state => console.log(state, "reduser state"));
-    const [disabledInput] = useState(false)
-    // console.log(currentUser, "currentUsercurrentUser")
+
 
     useEffect(() => {
         if(currentUser?.uid && registerSuccess === 200){
@@ -33,7 +31,7 @@ const Signup = () => {
             setCheckError(true)
             setRegisterError('Email already in use')
         }
-        if(error == 'Firebase: Error (auth/invalid-email).'){
+        if(error === 'Firebase: Error (auth/invalid-email).'){
             setCheckError(true)
             setRegisterError('Invalid email')
         }
