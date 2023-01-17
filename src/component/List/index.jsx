@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-    ArrowBackIosOutlined,
-    ArrowForwardIosOutlined,
-  } from "@material-ui/icons";
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+
 import { useRef, useState } from "react";
 import "./list.scss"
 import ListItem from 'component/ListItem';
@@ -31,7 +30,7 @@ const List = ({type}) => {
     <div className='list'>
         <span className='listTitle'>{type}</span>
         <div className="wrapper">
-        <ArrowBackIosOutlined
+        <ArrowBackIosNewOutlinedIcon
          className="sliderArrow left"
          onClick={() => handleClick("left")}
         />
@@ -50,7 +49,7 @@ const List = ({type}) => {
                   />
             ))}
         </div>
-        <ArrowForwardIosOutlined
+        <ArrowForwardIosOutlinedIcon
         className="sliderArrow right"
         onClick={() => handleClick("right")}
         />

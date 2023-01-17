@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-    ArrowBackIosOutlined,
-    ArrowForwardIosOutlined,
-  } from "@material-ui/icons";
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { useRef, useState } from "react";
 import "./video-list.scss"
 import VideoItem from 'component/VideoItem';
@@ -33,7 +31,7 @@ const VideoList = ({type}) => {
        <div className='list'>
            <span className='listTitleV'>{type}</span>
            <div className="wrapperV">
-           <ArrowBackIosOutlined
+           <ArrowBackIosNewOutlinedIcon
             className="sliderArrowV left"
             onClick={() => handleClick("left")}
            />
@@ -48,7 +46,7 @@ const VideoList = ({type}) => {
                      />
                ))}
            </div>
-           <ArrowForwardIosOutlined
+           <ArrowForwardIosOutlinedIcon
            className="sliderArrowV right"
            onClick={() => handleClick("right")}
            />
