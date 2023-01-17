@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-    ArrowBackIosOutlined,
-    ArrowForwardIosOutlined,
-  } from "@material-ui/icons";
+import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { useRef, useState } from "react";
 import "./fs-list.scss"
 import FcItem from 'component/FeaturedCastItem';
@@ -31,7 +29,7 @@ const FcList = ({type}) => {
     <div className='list'>
         <span className='listTitleF'>{type}</span>
         <div className="wrapper">
-        <ArrowBackIosOutlined
+        <ArrowBackIosNewOutlinedIcon
          className="sliderArrow left"
          onClick={() => handleClick("left")}
         />
@@ -46,7 +44,7 @@ const FcList = ({type}) => {
                   />
             ))}
         </div>
-        <ArrowForwardIosOutlined
+        <ArrowForwardIosOutlinedIcon
         className="sliderArrow right"
         onClick={() => handleClick("right")}
         />
