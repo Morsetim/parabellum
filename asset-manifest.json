@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0f94bd1.css",
+    "main.js": "/static/js/main.af5b9d3a.js",
+    "static/js/787.adb6b389.chunk.js": "/static/js/787.adb6b389.chunk.js",
+    "static/media/Poster.png": "/static/media/Poster.a37f7a10b6a2578ccf01.png",
+    "static/media/Strange.png": "/static/media/Strange.75172d3dea7fa90a3b88.png",
+    "static/media/shang.png": "/static/media/shang.7e65180f9dca75b0d031.png",
+    "static/media/dunkirk.png": "/static/media/dunkirk.b0acf45f2bef0a5c3757.png",
+    "static/media/spider.png": "/static/media/spider.91ed292062c2c03b7b0a.png",
+    "static/media/breath.png": "/static/media/breath.c4d075eb4a479049836d.png",
+    "static/media/Keanu.png": "/static/media/Keanu.24c1250eac5e002d041a.png",
+    "static/media/Batman.png": "/static/media/Batman.d525ee4169fd2c7d6d16.png",
+    "static/media/Timothy.png": "/static/media/Timothy.5c626720848a026cff9f.png",
+    "static/media/begins.png": "/static/media/begins.236cfcb633499d83b972.png",
+    "static/media/Ryan.png": "/static/media/Ryan.d5ae127967d7e72efd5e.png",
+    "static/media/Chloe.png": "/static/media/Chloe.fc1619943bdcf3a70352.png",
+    "static/media/007.png": "/static/media/007.5cdd9fc53e49ab43241a.png",
+    "static/media/tv.svg": "/static/media/tv.7455b80e9fd313caa3fdaa6d3ca31926.svg",
+    "static/media/tomatoes.svg": "/static/media/tomatoes.85cbb2f3fded49794ca530e4fc4d6f15.svg",
+    "static/media/vector.svg": "/static/media/vector.9b3120e8857bcb5e6e48c034ed15c490.svg",
+    "static/media/multi.svg": "/static/media/multi.367f852e25516473204a2b24cec71ea4.svg",
+    "index.html": "/index.html",
+    "static/media/deyplay.svg": "/static/media/deyplay.4f9b29177bfa058755795dd9b1fb8f42.svg",
+    "static/media/search.svg": "/static/media/search.9786d0704315885553ccd893781edaf9.svg",
+    "main.c0f94bd1.css.map": "/static/css/main.c0f94bd1.css.map",
+    "main.af5b9d3a.js.map": "/static/js/main.af5b9d3a.js.map",
+    "787.adb6b389.chunk.js.map": "/static/js/787.adb6b389.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0f94bd1.css",
+    "static/js/main.af5b9d3a.js"
+  ]
+}
