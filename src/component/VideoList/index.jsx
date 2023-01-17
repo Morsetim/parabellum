@@ -4,13 +4,12 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import { useRef, useState } from "react";
 import "./video-list.scss"
 import VideoItem from 'component/VideoItem';
-import { FeatureMovie, MovieList } from "component/data";
+import { MovieList } from "component/data";
 
 
 
 const VideoList = ({type}) => {
     const [slideNumber, setSlideNumber] = useState(0)
-   //    const [movie, setMovie] = useState(FeatureMovie);
    
     const listRef = useRef();
    
